@@ -15,12 +15,6 @@ echo "✅ Database connection established."
 # Move to the src directory for proper Python module imports
 cd /app/src
 
-# Debug: Check Python and uvicorn availability
-echo "🔍 Debug: Python path and uvicorn check:"
-echo "  Python: $(which python)"
-echo "  PATH: $PATH"
-python -c "import uvicorn; print(f'  uvicorn version: {uvicorn.__version__}')" || echo "  ❌ uvicorn not found in Python"
-echo ""
 
 # Get the command
 MODE=${1:-${API_MODE:-start}}
