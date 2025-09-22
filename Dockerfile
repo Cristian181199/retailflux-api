@@ -19,8 +19,8 @@ COPY src/shared/requirements.txt /tmp/requirements-shared.txt
 
 # Install Python dependencies in virtual environment
 RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r /tmp/requirements-api.txt \
     && pip install --no-cache-dir -r /tmp/requirements-shared.txt \
+    && pip install --no-cache-dir -r /tmp/requirements-api.txt \
     && find /opt/venv -name "*.pyc" -delete \
     && find /opt/venv -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
 
