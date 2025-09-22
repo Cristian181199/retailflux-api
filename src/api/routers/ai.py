@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, BackgroundTasks
 from sqlalchemy.orm import Session
 from typing import Optional
 
-from shared.database import get_db
+from shared.database.config import get_db
 from shared.database.services.product_service import product_service
 from shared.ai.embeddings.generator import embedding_generator
 

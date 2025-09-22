@@ -12,8 +12,8 @@ while ! pg_isready -h "${POSTGRES_HOST:-localhost}" -p "${POSTGRES_PORT:-5432}" 
 done
 echo "✅ Database connection established."
 
-# Move to the API directory
-cd /app/src/api
+# Move to the src directory for proper Python module imports
+cd /app/src
 
 # Debug: Check Python and uvicorn availability
 echo "🔍 Debug: Python path and uvicorn check:"
@@ -28,7 +28,7 @@ MODE=${1:-${API_MODE:-start}}
 case "$MODE" in
     "start")
         echo "🌐 Starting RetailFlux API server..."
-        exec python -m uvicorn main:app \
+        exec python -m uvicorn api.main:app \
             --host "${API_HOST:-0.0.0.0}" \
             --port "${API_PORT:-8000}" \
             --workers "${API_WORKERS:-1}" \
@@ -36,7 +36,7 @@ case "$MODE" in
         ;;
     "dev")
         echo "🔧 Starting API in development mode..."
-        exec python -m uvicorn main:app \
+        exec python -m uvicorn api.main:app \
             --host "${API_HOST:-0.0.0.0}" \
             --port "${API_PORT:-8000}" \
             --reload \

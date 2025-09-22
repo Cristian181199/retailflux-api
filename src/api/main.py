@@ -12,8 +12,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../'))
 
 from shared.config.settings import api_settings
 from shared.database.config import get_db
-from .routers import products, search, ai
-from .middleware.logging import setup_logging
+from api.routers import products, search, ai
+from api.middleware.logging import setup_logging
 
 # Setup logging
 setup_logging()
