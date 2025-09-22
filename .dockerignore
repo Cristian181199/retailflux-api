@@ -1,0 +1,67 @@
+# Git and CI/CD files
+.git/
+.gitignore
+.github/
+.gitattributes
+
+# Python environments and cache
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+.pytest_cache/
+.coverage
+.tox/
+.nox/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Development and test files
+data/
+logs/
+debug/
+tests/
+*.log
+*.tmp
+*.temp
+*.test
+*.spec
+
+# Documentation (not needed in production)
+*.md
+DOKPLOY_DEPLOYMENT.md
+README.md
+LICENSE
+
+# Development configuration
+.env
+.env.local
+.env.example
+docker-compose*.yml
+
+# Node.js (if any)
+node_modules/
+npm-debug.log
+yarn-error.log
