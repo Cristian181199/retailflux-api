@@ -53,6 +53,7 @@ WORKDIR /app
 # Copy source code
 COPY --chown=apiuser:apiuser src/ ./src/
 COPY --chown=apiuser:apiuser entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY --chown=apiuser:apiuser alembic.ini ./alembic.ini
 
 # Set permissions
 RUN chmod +x /usr/local/bin/entrypoint.sh \

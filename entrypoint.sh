@@ -38,7 +38,7 @@ case "$MODE" in
         ;;
     "migrate")
         echo "📊 Running database migrations..."
-        cd /app/src
+        cd /app
         exec alembic upgrade head
         ;;
     "shell")
